@@ -161,11 +161,16 @@ a:visited { color: #205caa; }
 
 .posts .post-date {
   display: block;
-  font-size: 32px;
+  font-size: 16px;
   color: #818181;
 }
-
-
+/* 
+.posts .post-date {
+  display: none;
+}
+ */
+ 
+ 
 /* Post styles */
 /* ----------------------------------------------------------*/
 

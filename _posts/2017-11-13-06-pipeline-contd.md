@@ -1,5 +1,6 @@
 ---
 published: true
+title: "Taking Models from Data Scientists to Users(Part 6): Joining the Pipeline - II"
 ---
 # Building the full Data Pipeline - II
 
