@@ -10,6 +10,11 @@ layout: default
       <li>
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+		
+		<!-- //IMAGE -->
+      <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+      <!-- //IMAGE -->
+		
         <br>
         {{ post.excerpt }}
       </li>
