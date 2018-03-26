@@ -27,5 +27,9 @@ title: Projects
 
 * [**Options Valuation Calculator**](https://anuragsoni9.shinyapps.io/european_option_pricing_-_black_scholes/): Built an Options valuation calculator based on Black-Scholes-Merton Model using R programming language and Shiny framework
 
+<div class="image">
+<img src="https://anuragsoni9.github.io/assets/OptionsCalculator.PNG" class="center" width="1200">
+  <div  align="center"><i>Options Valuation Calculator</i></div>
+</div>
 
 
