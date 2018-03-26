@@ -11,12 +11,14 @@ layout: default
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 		
+		<br>
+		
 		<!-- //IMAGE -->
-      <img src="{{ post.image | prepend: site.baseurl }}" alt="{{ post.title }}" title="{{ post.title }}">
+      <img src="{{ post.image | prepend: site.baseurl }}" class="center" width="1200">
       <!-- //IMAGE -->
 		
-        <br>
-        {{ post.excerpt }}
+        <!-- <br> -->
+        <!-- {{ post.excerpt }} -->
       </li>
     {% endfor %}
   </ul>

@@ -11,7 +11,12 @@ title: Projects
 
 •	**Decision Support System for Music Producer**: Implemented [dashboard](https://anuragsoni9.shinyapps.io/spotifyapp/) application that uses Spotify datasets to partially cluster songs by their popularity and revenue capability
 
-![](https://anuragsoni9.github.io/assets/RockNRolla.PNG)
+<div class="imgcap">
+<img src="assets/RockNRolla.PNG" class="center" width="1200">
+  <div  align="left"><i>Shiny App Screenshot </i></div>
+</div>
+<br>
+
 
 •	[**Dockerized implementation of TensorFlow solution**](https://anuragsoni9.github.io/): Created a production-like instance of an object-detection solution build using TensorFlow library on Google Cloud server using Docker and Kubernettes technology.
 

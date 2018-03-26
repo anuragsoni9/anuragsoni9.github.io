@@ -1,6 +1,7 @@
 ---
 published: true
 title: "Taking Models from Data Scientists to Users(Part 6): Joining the Pipeline - II"
+image: /assets/Post4n6.png
 ---
 # Building the full Data Pipeline - II
 
@@ -14,8 +15,8 @@ The processing infrastructure from GCS will be operated and managed by  [Kuberne
 - [**visualizer**](https://github.com/kubernetes/dashboard): gives sorted info about running instances, their network utilization 
 
 <div class="image">
-<img src="https://github.com/kubernetes/dashboard/raw/master/docs/dashboard-ui.png" alt="sample">
-  <div  align="center"><i>Kubernetes Dashboard UI </i></div>
+<img src="https://github.com/kubernetes/dashboard/raw/master/docs/dashboard-ui.png" alt="sample" width ="900">
+  <div  align="left"><i>Kubernetes Dashboard UI </i></div>
 </div>
 <br>
 
