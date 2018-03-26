@@ -456,3 +456,7 @@ th, td {
     padding: 8px;
 }
 
+/* anurag soni customization */
+.boxed {
+  border: 1px ridge #f4f4f7 ;
+}
