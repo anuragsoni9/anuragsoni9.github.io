@@ -1,13 +1,25 @@
 # Site settings
 title: Anurag Soni's Blog
 email: soni.anuragg@gmail.com
-description: “Data Scientist”
+description: “A blog dedicated to reviewing tools used by Data Scientist”
 baseurl: ""
 url: "https://anuragsoni9.github.io"
 github_username:  anuragsoni9
 twitter_username: anurag___soni
 linkedin_username: anurag-soni1
 
+twitter:
+  username: anurag___soni
+  
+ logo: /assets/favicon.ico
+ 
+ social:
+  name: Anurag Soni
+  links:
+    - https://twitter.com/anurag___soni
+    - https://www.facebook.com/anurag.soni
+    - https://www.linkedin.com/in/anurag-soni1
+    - https://github.com/anuragsoni9
 
 # Build settings
 markdown: kramdown
