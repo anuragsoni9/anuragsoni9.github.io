@@ -5,7 +5,19 @@ image: /assets/Post4n6.png
 ---
 # Building the full Data Pipeline - II
 
->In the [series](https://github.com/anuragsoni9/ProductionScale/blob/master/README.md), we previously talked about various components and how different stages fit together to form a data pipeline. This post first gives an introduction to the revolutionary *taskmaster* in our production environment - **Kubernetes** and then proceed to demonstrate step-by-step how to possibly implement a running data pipeline of Tyco Object Detection in Google Cloud. 
+This is a series of write-up on  a modern data pipeline implementaiton with case study of Tyco Cam security solutions using various data tooling features like Pacyderm, Kubernetes, Docker, Tensorflow and Storage infrastructre like AWS
+
+Table of Contents
+1. [Intro - Analytics and Deployment: Why should Data Scientist care about Production?](https://anuragsoni9.github.io/2017/10/09/01-Intro/)
+2. [Cloud Locations: Case for Objects Storage](https://anuragsoni9.github.io/2017/10/16/02-storage/)
+3. [Model and Framework selection in Production: A Case of Object Detection with TensorFlow](https://anuragsoni9.github.io/2017/10/23/03-Models/)
+4. [Building the full Data Pipeline - I](https://anuragsoni9.github.io/2017/10/30/04-pipeline/)
+5. [Container- boxing code dependencies with Docker](https://anuragsoni9.github.io/2017/11/06/05-containers/)
+6. [Building the full Data Pipeline - II](https://anuragsoni9.github.io/2017/11/13/06-pipeline-contd/)
+7. [Update, Maintain and Scale your Data Science Pipeline](https://anuragsoni9.github.io/2017/11/20/07-Update-Maintain-Scale/)
+<center>&#9679;&#9679;&#9679;</center>
+
+>In the series, we previously talked about various components and how different stages fit together to form a data pipeline. This sixth post first gives an introduction to the revolutionary *taskmaster* in our production environment - **Kubernetes** and then proceed to demonstrate step-by-step how to possibly implement a running data pipeline of Tyco Object Detection in Google Cloud. 
 
 
 ## Kubernetes - Why?
@@ -73,7 +85,7 @@ For example:
 ```
 
 GH contains Dockerfile as well.
-More on Docker container is discussed in [here](https://github.com/anuragsoni9/ProductionScale/blob/master/05-containers.md).
+More on Docker container is discussed in [here](https://anuragsoni9.github.io/2017/11/06/05-containers/).
 
 
 - **JSON Pipeline specification** 

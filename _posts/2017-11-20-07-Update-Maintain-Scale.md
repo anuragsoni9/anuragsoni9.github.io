@@ -5,6 +5,18 @@ image: /assets/Post7.png
 ---
 # Update, Maintain and Scale your Data Science Pipeline
 
+This is a series of write-up on  a modern data pipeline implementaiton with case study of Tyco Cam security solutions using various data tooling features like Pacyderm, Kubernetes, Docker, Tensorflow and Storage infrastructre like AWS
+
+Table of Contents
+1. [Intro - Analytics and Deployment: Why should Data Scientist care about Production?](https://anuragsoni9.github.io/2017/10/09/01-Intro/)
+2. [Cloud Locations: Case for Objects Storage](https://anuragsoni9.github.io/2017/10/16/02-storage/)
+3. [Model and Framework selection in Production: A Case of Object Detection with TensorFlow](https://anuragsoni9.github.io/2017/10/23/03-Models/)
+4. [Building the full Data Pipeline - I](https://anuragsoni9.github.io/2017/10/30/04-pipeline/)
+5. [Container- boxing code dependencies with Docker](https://anuragsoni9.github.io/2017/11/06/05-containers/)
+6. [Building the full Data Pipeline - II](https://anuragsoni9.github.io/2017/11/13/06-pipeline-contd/)
+7. [Update, Maintain and Scale your Data Science Pipeline](https://anuragsoni9.github.io/2017/11/20/07-Update-Maintain-Scale/)
+<center>&#9679;&#9679;&#9679;</center>
+
 > This is the seventh and final article in the series discussing the elements required to transform a locally developed data science model to a production-ready machine.
 
 In the series, we deployed a robust Tyco-inspired pipeline with containers and orchestrated the flow of data with Pachyderm and Kubernetes(K8s). 
@@ -17,8 +29,8 @@ Our pipeline has:
 
 We automated the working of above pieces together, barring the entry point where we input images. Inputting images can be automated with the help of integrating services from other data teams. We also discussed the key roles of:
 
-- [Pachyderm](https://github.com/anuragsoni9/ProductionScale/blob/master/02-%20Storage.md) in preserving the state of data at a particular point of time (Data Provenance) 
-- [Kubernetes](https://github.com/anuragsoni9/ProductionScale/blob/master/06-pipeline2.md) in the orchestration of [Docker](https://github.com/anuragsoni9/ProductionScale/blob/master/05-containers.md) containers.
+- [Pachyderm](https://anuragsoni9.github.io/2017/10/16/02-storage/) in preserving the state of data at a particular point of time (Data Provenance) 
+- [Kubernetes](https://anuragsoni9.github.io/2017/11/13/06-pipeline-contd/) in the orchestration of [Docker](https://anuragsoni9.github.io/2017/11/06/05-containers/) containers.
 
 In this final installment, we don the hat of a mechanic for this pipeline. We aim to go over activities that are required routinely after the first deployment. Note that the team required to keep the pipeline running at this stage is expected to be much smaller than an equivalent Hadoop ecosystem team, owing to the automation of infrastructure pieces and simplicity of re-configuration needs.
 Three categories of expected post-deployment tasks are: 
@@ -27,15 +39,15 @@ Three categories of expected post-deployment tasks are:
 - Debugging and Maintenance  
 - Scaling
 
-
 ## Incremental Updating
-
 Do you want to change something you built earlier? Of course, you do. Like Software Engineering, Data Science world works often in project life-cycles where things get changed constantly. The simplicity of change in Pachyderm lies with its JSON file specifications and its one wrapper command service `pachctl` . 
 
 Two types of changes that are most frequent:
 
 1. **Pipeline**
+2. **Code**
 
+#### **Pipeline**
 This involves addition/deletion/re-configuration of stages.  Pipelines are defined in JSON file specification and can be changed there. Once changed, the file can be run normally as you would when you created the pipeline with CLI tool `pachctl`, but with a new parameter `update-pipeline`.
 
 For instance, new registry can be added to JSON  
@@ -56,7 +68,7 @@ which can then be updated with the following command
     $ pachtl update-pipeline -f threat-detect.json
 
 
-2. **Code**
+#### **Code**
 
 Updated code needs a rebuilding of docker image which would entail changes in Dockerfile specification in JSON(updated `threat-detectedV2.json` ) where it refers to the code file (updated `threat-detectV2.py`).
 For example, the following command builds a docker image file with tag V2:
@@ -107,10 +119,12 @@ As long as persistent volume or the object storage bucket is there, it can be mi
 ## Scaling
 
 Pachyderm has in-built intelligence to scale-up distributed data. Compared to 
-Hadoop, where developers have to code in the Map and Reduce stage (Scala object), Pachyderm internally handles the distribution between containers based on defined *specs* (defining number of workers) and *Pattern match*(defining each worker responsibility).
+Hadoop, where developers have to code in the Map and Reduce stage (Scala object), Pachyderm internally handles the distribution between containers based on:
+1. **Specs-based** (defining number of workers) 
+2. **Pattern match**(defining each worker responsibility).
 
 
-1. **Specs-based(“parallelism_spec”)**
+#### **Specs-based(“parallelism_spec”)**
 
 Here, parallelization is done at the implementation level rather than the code level. Multiple instances of identical pods (workers) could be spun up to handle the increased work-load requirement.
 In JSON pipeline spec, either of the two parameters can be set: 
@@ -131,11 +145,11 @@ For instance, as the object detection phase(TensorFlow) is the bottleneck proces
 
 ![](https://d2mxuefqeaa7sj.cloudfront.net/s_D058D34B483005C4EC4C4FB32AC82DF46514F221E2AFF7E731D5FEB7D46151E7_1513074688908_Production+Data+Pipeline+-+Tyco+with+Distribution.svg)
 
-2. **Pattern-based**
+#### **Pattern-based**
 
 Patterns in [data](https://en.wikipedia.org/wiki/Glob_(programming))(Glob) are used to partition the responsibility of workers. Each pattern-match is taken as one “atomic datum” and then data is distributed across mathced datums.
 
-For instance, in our file system example defined in previous [post](https://github.com/anuragsoni9/ProductionScale/blob/master/04-pipeline.md),
+For instance, in our file system example defined in previous [post](https://anuragsoni9.github.io/2017/10/30/04-pipeline/),
 
     /user-deviceid1
       time1.json
