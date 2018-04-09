@@ -7,8 +7,9 @@ title: Projects
 •	[**Temporal Demand Forecasting Using Machine Learning Techniques: A Comparative study of Open Source Solutions**](https://github.com/anuragsoni9/Retail-Forecasting): Built a production ready machine-learning solution using - Python deep learning libraries with results expecting to save inventory costs by 3%
 
 <div class="image">
-<img src="https://anuragsoni9.github.io/assets/GroceryForecasting.PNG" class="center" width="1200">
-  <div  align="center"><i>Poster presented at INFORMS 2018 </i></div>
+<a href="https://anuragsoni9.github.io/assets/2018_INFORMSBA_GroceryForecasting_for_print.pdf">
+<img src="https://anuragsoni9.github.io/assets/GroceryForecasting.PNG" class="center" width="300">
+</a>
 </div>
 
 
@@ -20,8 +21,9 @@ title: Projects
 
 
 <div class="image">
-<img src="https://anuragsoni9.github.io/assets/RebateForecastingNOptm.PNG" class="center" width="1200">
-  <div  align="center"><i>Poster presented at INFORMS 2018</i></div>
+<a href="https://anuragsoni9.github.io/assets/2018_INFORMSBA_TieredRebates_for_print.pdf">
+<img src="https://anuragsoni9.github.io/assets/RebateForecastingNOptm.PNG" class="center" width="300">
+</a>
 </div>
 
 
