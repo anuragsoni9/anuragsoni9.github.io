@@ -4,7 +4,27 @@ title: Projects
 ---
 
 
-•	[**Demand Forecasting of supermarket sales**](https://github.com/anuragsoni9/Retail-Forecasting): Built a production ready machine-learning solution using - Python deep learning libraries with results expecting to save inventory costs by 3%
+•	[**Temporal Demand Forecasting Using Machine Learning Techniques: A Comparative study of Open Source Solutions**](https://github.com/anuragsoni9/Retail-Forecasting): Built a production ready machine-learning solution using - Python deep learning libraries with results expecting to save inventory costs by 3%
+
+<div class="image">
+<img src="https://anuragsoni9.github.io/assets/GroceryForecasting.PNG" class="center" width="1200">
+  <div  align="center"><i>Poster presented at INFORMS 2018 </i></div>
+</div>
+
+
+
+
+
+
+•	**Predicting and Optimizing Transportation Costs for a National Retailer Under Tiered Rebate Constraints**: Built a forecasting model that supports reporting of weekly expected rebate numbers in an annual tiered delivery contract.
+
+
+<div class="image">
+<img src="https://anuragsoni9.github.io/assets/RebateForecastingNOptm.PNG" class="center" width="1200">
+  <div  align="center"><i>Poster presented at INFORMS 2018</i></div>
+</div>
+
+
 
 
 
@@ -23,7 +43,7 @@ title: Projects
 
 
 
-•	**Delivery Rebate Forecast for retailers**: Built a forecasting model that supports reporting of weekly expected rebate numbers in an annual tiered delivery contract.
+
 
 •	[**Options Valuation Calculator**](https://anuragsoni9.shinyapps.io/european_option_pricing_-_black_scholes/): Built an Options valuation calculator based on Black-Scholes-Merton Model using R programming language and Shiny framework
 
