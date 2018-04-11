@@ -3,7 +3,8 @@ title: Anurag Soni's Blog
 email: soni.anuragg@gmail.com
 description: “A blog dedicated to reviewing tools used by Data Scientist”
 baseurl: ""
-url: "https://anuragsoni9.github.io"
+url: "https://anuragsoni9.github.io"      
+#url: "http://localhost:4000"
 github_username: anuragsoni9
 twitter_username: anurag___soni
 linkedin_username: anurag-soni1
@@ -37,8 +38,12 @@ gems:
 
   
   # Disqus Comments
+PAGE_URL:{{ site.url }}{{ page.url }}
+PAGE_IDENTIFIER:{{ page.url }}
+EXAMPLE:anuragsoni9-github-io
 disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
     shortname: "asoni"
+    
 url: 

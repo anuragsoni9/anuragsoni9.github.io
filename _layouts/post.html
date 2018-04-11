@@ -39,7 +39,7 @@ layout: default
   <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
   {% endif %}
   --> 
- {% if site.disqus.shortname %}
+ {% if page.comments== true %}
   {% include disqus_comments.html %}
 {% endif %}
 
