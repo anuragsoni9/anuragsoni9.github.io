@@ -2,6 +2,7 @@
 published: true
 title: "Taking Models from Data Scientists to Users(Part 7): Going Forward.. "
 image: /assets/Post7.png
+comments: true
 ---
 # Update, Maintain and Scale your Data Science Pipeline
 

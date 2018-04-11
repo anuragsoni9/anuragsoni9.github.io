@@ -2,6 +2,7 @@
 published: true
 title: "Taking Models from Data Scientists to Users(Part 6): Joining the Pipeline - II"
 image: /assets/Post4n6.png
+comments: true
 ---
 # Building the full Data Pipeline - II
 
