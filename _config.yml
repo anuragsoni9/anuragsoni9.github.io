@@ -38,9 +38,9 @@ gems:
 
   
   # Disqus Comments
-PAGE_URL:{{ site.url }}{{ page.url }}
-PAGE_IDENTIFIER:{{ page.url }}
-EXAMPLE:anuragsoni9-github-io
+#PAGE_URL:{{ site.url }}{{ page.url }}
+#PAGE_IDENTIFIER:{{ page.url }}
+#EXAMPLE:anuragsoni9-github-io
 disqus:
     # Leave shortname blank to disable comments site-wide.
     # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
