@@ -1,7 +1,7 @@
 ---
 layout: page
 title: CV
-link: https://drive.google.com/open?id=1Xbf0TEU8-EWZfNPVar7UUNfzf1EGbDw9
+link: https://anuragsoni9.github.io/assets/Anurag_Soni_Data_Scientist.pdf
 ---
 
 
